@@ -1,9 +1,9 @@
 <div class="container-archive">
-    <div class="count">共有 {{ len .Pages }} 篇文章</div>
-    
+    <div class="count">Share {{ len .Pages }} Article</div>
+
     <!-- 最近文章 -->
     <div class="recentf">
-        <span class="desc">- 最近更新 ➭</span>
+        <span class="desc">- Latest updates ➭</span>
         {{  range first 8 .Site.RegularPages.ByLastmod.Reverse }}
         <!-- {{.Type}} -->
         {{ if eq .Type "page" }}
@@ -15,7 +15,7 @@
         {{ end }}
         {{ end }}
     </div>
-    
+
 	<!-- 标签 -->
     <!-- <div class="desc">标签: </div> -->
     <div class="tags">
@@ -29,7 +29,7 @@
                     <div class="arc-post">
                         {{ range .Pages }}
                         <!-- 适配 Obsidian 的 Templater 插件的 Front Matter -->
-                        {{if (ne .Title "<% tp.file.title %>")}}
+                        {{if (ne .Title "<% tp.f:ile.title %>")}}
                         <div class="arc-post-item">
                             <a href="{{.Permalink}}">{{ .Title }}</a>
                         </div>
