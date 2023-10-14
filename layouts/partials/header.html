@@ -2,10 +2,10 @@
     {{if .IsHome}}
     <div class="left">
         <div class="desc">
-            <a href="{{ with .Site.Params.img.link }}{{.}}{{else}}/about{{end}}">
-                <div class="img-wrapper" style="background: {{ with .Site.Params.img.background }}{{.}}{{end}};">
-                    {{if .Site.Params.img.src }}
-                    <img src="/imgs/{{ .Site.Params.img.src }}" width="{{ with .Site.Params.img.width }}{{.}}{{end}}" />
+            <a href="{{ with .Site.Params.contact.img.link }}{{.}}{{else}}/about{{end}}">
+                <div class="img-wrapper" style="background: {{ with .Site.Params.contact.img.background }}{{.}}{{end}};">
+                    {{if .Site.Params.contact.img.src }}
+                    <img src="/imgs/{{ .Site.Params.contact.img.src }}" width="{{ with .Site.Params.contact.img.width }}{{.}}{{end}}" />
                     {{ else }}
                     <img src="/imgs/cat.svg" width="100" />
                     {{ end }}
